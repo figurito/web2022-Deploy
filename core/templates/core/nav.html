@@ -1,0 +1,9 @@
+<div class="h-screen flex justify-center bg-gray-900">
+    <div x-data="{show: false}" @click.away="show = false"> <button @click="show = ! show" class="mt-4 border-0 block bg-blue-600 bg-blue-600 text-gray-200 rounded-lg px-6 text-sm py-3 overflow-hidden focus:outline-none focus:border-white">
+            <div class="flex justify-between"> <span>Dashboard</span> <svg class="fill-current text-gray-200" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M7 10l5 5 5-5z" />
+                    <path d="M0 0h24v24H0z" fill="none" /></svg> </div>
+        </button>
+        <div x-show="show" class="mt-2 py-2 bg-white rounded-lg shadow-xl"> <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Settings</a> <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Profile</a> <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Signout</a> </div>
+    </div>
+</div>

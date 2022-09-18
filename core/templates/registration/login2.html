@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="max-w-lg mx-auto flex flex-wrap p-6">
+    <div class="w-full bg-gray-100 p-6 rounded-xl">
+        <h1 class="mb-6 text-2xl">Iniciar Sesion</h1>
+
+        <form method="post" action="." class="space-y-3">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div>
+                <button class="py-2 px-6 rounded-xl text-white bg-purple-500 hover:bg-purple-700">Acceder</button>
+            </div>
+        </form>
+        <br>
+        <a href="{% url 'signup1' %}" class="py-2 px-10 rounded-xl text-white bg-purple-500 hover:bg-purple-700">Crear Cuenta</a>    
+    </div>
+    
+</div>
+{% endblock %}
